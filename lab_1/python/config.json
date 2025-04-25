@@ -1,5 +1,5 @@
 {
-    "start_size": 10,
-    "step": 10
-  }
-  
+  "start_size": 10,
+  "step": 10,
+  "base_folder": "S:/3rd_cource/parallel_programming/lab_1/matrix"
+}

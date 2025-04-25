@@ -5,14 +5,13 @@ import json
 def read_matrix_from_file(filename, skip_lines=0):
     with open(filename, 'r') as file:
         lines = file.readlines()[skip_lines:]
-        matrix_data = [line.split() for line in lines]
+        matrix_data = [line.split() for line in lines if line.strip() != ""]
 
     row_lengths = [len(row) for row in matrix_data]
     if len(set(row_lengths)) != 1:
         raise ValueError(f"Матрица в файле {filename} имеет строки разной длины!")
 
-    matrix = np.array(matrix_data, dtype=int)
-    return matrix
+    return np.array(matrix_data, dtype=int)
 
 def write_matrix_to_file(matrix, filename):
     with open(filename, 'w') as file:
@@ -20,9 +19,7 @@ def write_matrix_to_file(matrix, filename):
             file.write(' '.join(map(str, row)) + '\n')
 
 def compare_matrices(matrix1, matrix2):
-    if matrix1.shape != matrix2.shape:
-        return False
-    return np.array_equal(matrix1, matrix2)
+    return matrix1.shape == matrix2.shape and np.array_equal(matrix1, matrix2)
 
 def check_matrix_multiplication(base_folder, start_size=5, step=5):
     folder_names = sorted(os.listdir(base_folder), key=lambda x: int(x.split('x')[0]) if x.split('x')[0].isdigit() else 0)
@@ -55,18 +52,17 @@ def check_matrix_multiplication(base_folder, start_size=5, step=5):
             except ValueError as e:
                 raise ValueError(f"Ошибка при умножении матриц в папке {folder_name}: {e}")
 
-    print("Все проверки завершены успешно!")
+    print("✅ Все проверки завершены успешно!")
 
 def load_config(config_file):
-    """Загружает параметры из JSON файла"""
     with open(config_file, 'r') as file:
         config = json.load(file)
-    return config['start_size'], config['step']
+    return config['start_size'], config['step'], config['base_folder']
 
 if __name__ == "__main__":
-    base_folder = 'C:/Users/Uniqu/Desktop/parallel_programming/lab_1/matrix'
-    config_file = 'C:/Users/Uniqu/Desktop/parallel_programming/lab_1/python/config.json'
-    start_size, step = load_config(config_file)
+    config_file = "S:/3rd_cource/parallel_programming/lab_1/python/config.json"
+    start_size, step, base_folder = load_config(config_file)
+
     try:
         check_matrix_multiplication(base_folder, start_size, step)
     except ValueError as e:
