@@ -47,10 +47,10 @@ LAB_1/
 ###  Результаты экспериментов
 
 ####  Результат проверки:
-![image](https://github.com/user-attachments/assets/0aeaf16e-7845-4619-9dd4-3c2f5e093d1b)
+![alt text](image.png)
 
 ####  График зависимости времени выполнения от размера матрицы:
-![image](https://github.com/user-attachments/assets/b842a177-9253-4aaf-901e-64a50b0486ea)
+![alt text](image-1.png)
 
 
 ---
