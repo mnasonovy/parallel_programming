@@ -47,13 +47,10 @@ LAB_1/
 ###  Результаты экспериментов
 
 ####  Результат проверки:
-![alt text](image.png)
+s:\3rd_cource\parallel_programming\image.png
 
 ####  График зависимости времени выполнения от размера матрицы:
-![alt text](image-1.png)
-
-
----
+s:\3rd_cource\parallel_programming\image-1.png
 
 ###  Выводы
 
