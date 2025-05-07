@@ -124,7 +124,7 @@ LAB_2/
 ![Результат проверки](images/image2.png)
 
 #### График зависимости времени выполнения от размера задачи (по потокам):
-![img.png](images/grafic.png)
+![img.png](images/image-2.png)
 
 ---
 
