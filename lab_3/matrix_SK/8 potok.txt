@@ -1,0 +1,16 @@
+Matrix Size: 500x500
+Multiplication Time: 0.384694 seconds
+Threads: 8
+
+Matrix Size: 1000x1000
+Multiplication Time: 3.41729 seconds
+Threads: 8
+
+Matrix Size: 1500x1500
+Multiplication Time: 13.2835 seconds
+Threads: 8
+
+Matrix Size: 2000x2000
+Multiplication Time: 30.9542 seconds
+Threads: 8
+
